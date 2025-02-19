@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Казіношка</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="section">
+      <div class="main">
+        <div class="buttons">
+          <button class="btn">SND</button>
+          <button class="btn">SET</button>
+          <button class="btn">SIM</button>
+        </div>
+
+        <img id="logo" src="logo.jpg" alt="logo" />
+
+        <div class="slot-machine">
+          <div class="reel"><div>🍒</div></div>
+          <div class="reel"><div>🍋</div></div>
+          <div class="reel"><div>🔔</div></div>
+          <div class="reel"><div>🍉</div></div>
+          <div class="reel"><div>⭐</div></div>
+          <div class="reel"><div>🍇</div></div>
+          <div class="reel"><div>🍊</div></div>
+          <div class="reel"><div>💎</div></div>
+          <div class="reel"><div>🎰</div></div>
+        </div>
+
+        <div class="balance">
+          <button class="plus-">-</button>
+          <div id="coins"></div>
+          <button class="plus-">+</button>
+        </div>
+        <button id="button" onclick="spin()">Spin</button>
+
+        <script src="script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

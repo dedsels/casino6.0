@@ -1,0 +1,2418 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.slot-machine {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: clamp(1px, 2vw, 5px);
+  padding: 20px;
+  background: #5c4132;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.reel {
+  width: 150px;
+  height: 150px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+}
+.reel div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+}
+#button {
+  width: 200px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  background-image: url("green-button.png");
+  background-size: cover;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  transform: scale(0.95);
+}
+#coins {
+  background-color: rgb(121, 143, 160);
+  color: black;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+  font-size: 30px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.plus- {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(121, 143, 160);
+  padding-left: 19px;
+  padding-top: 13px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: black;
+  display: flex;
+}
+.balance {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+.btn {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(121, 143, 160);
+  font-size: 13px;
+  color: black;
+  padding-top: 10px;
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  position: absolute;
+  top: 20%;
+  left: 51%;
+  transform: translate(250px, 50px);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+#section{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 100px;
+  margin-top: 100px;
+}
+
+#logo {
+  width: 15%;
+  height: 15%;
+  transform: translate(0px, -10px);
+}
+
+@media (min-width: 1850px) and (max-width: 2134px) {
+  .main > .buttons {
+    top: 10%;
+    left: 51%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo {
+    width: 17%;
+    height: 15%;
+    transform: translate(0px, -10px);
+  }
+}
+@media (min-width: 1550px) and (max-width: 1850px) {
+  .main > .buttons {
+    top: 10%;
+    left: 51%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo {
+    width: 20%;
+    height: 15%;
+    transform: translate(0px, -10px);
+  }
+}
+@media (min-width: 1350px) and (max-width: 1550px) {
+  .main > .buttons {
+    top: 10%;
+    left: 51%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo {
+    width: 22%;
+    height: 15%;
+    transform: translate(0px, -10px);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1350px) {
+  .main > .buttons {
+    top: 10%;
+    left: 51%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo {
+    width: 25%;
+    height: 15%;
+    transform: translate(0px, -10px);
+  }
+}
+@media (min-width: 1090px) and (max-width: 1200px) {
+  .main > .buttons {
+    top: 10%;
+    left: 51%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo {
+    width: 27%;
+    height: 15%;
+    transform: translate(0px, -10px);
+  }
+}
+@media (min-width: 1016px) and (max-width: 1090px) {
+  .main > .buttons {
+    top: 10%;
+    left: 48%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 15px;
+    width: 38%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 40px;
+    width: 45px;
+    padding-top: 0px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 15%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 985px) and (max-width: 1016px) {
+  .main > .buttons {
+    top: 10%;
+    left: 48%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 15px;
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 40px;
+    width: 45px;
+    padding-top: 0px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 15%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 966px) and (max-width: 985px) {
+  .main > .buttons {
+    top: 5%;
+    left: 47%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 15px;
+    width: 40%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 40px;
+    width: 45px;
+    padding-top: 0px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 10%;
+    transform: translate(0px, 5px);
+  }
+}
+
+@media (min-width: 911px) and (max-width: 966px) {
+  .main > .buttons {
+    top: 5%;
+    left: 47%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 15px;
+    width: 42.5%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 40px;
+    width: 45px;
+    padding-top: 0px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 10%;
+    transform: translate(0px, 5px);
+  }
+}
+
+@media (min-width: 886px) and (max-width: 911px) {
+  .main > .buttons {
+    top: 5%;
+    left: 47%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 15px;
+    width: 44%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 40px;
+    width: 45px;
+    padding-top: 0px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 10%;
+    transform: translate(0px, 5px);
+  }
+}
+
+@media (min-width: 825px) and (max-width: 885px) {
+  .main > .buttons {
+    top: 5%;
+    left: 39%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 13px;
+    width: 32%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 3px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 85px;
+    height: 85px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 30px;
+    width: 35px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+@media (min-width: 760px) and (max-width: 824px) {
+  .main > .buttons {
+    top: 5%;
+    left: 39%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 13px;
+    width: 34.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 3px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 85px;
+    height: 85px;
+    font-size: 40px;
+  }
+  #coins {
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 30px;
+    width: 35px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+
+@media (min-width: 710px) and (max-width: 759px) {
+  .main > .buttons {
+    top: 5%;
+    left: 34%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 13px;
+    width: 29%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 3px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+  }
+  #coins {
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 30px;
+    width: 35px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+
+@media (min-width: 671px) and (max-width: 710px) {
+  .main > .buttons {
+    top: 5%;
+    left: 34%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 13px;
+    width: 31%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 3px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+  }
+  #coins {
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 30px;
+    width: 35px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 150px;
+    height: 35px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+
+@media (min-width: 570px) and (max-width: 670px) {
+  .main > .buttons {
+    top: 5%;
+    left: 31%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 31%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 30px;
+  }
+  .plus- {
+    height: 30px;
+    width: 35px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 130px;
+    height: 30px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 20px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+@media (min-width: 531px) and (max-width: 569px) {
+  .main > .buttons {
+    top: 5%;
+    left: 27%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 35%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 10px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+@media (min-width: 500px) and (max-width: 530px) {
+  .main > .buttons {
+    top: 5%;
+    left: 25%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 37%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 10px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 30%;
+    height: 9%;
+    transform: translate(0px,12px);
+  }
+}
+@media (min-width: 498px) and (max-width: 499px) {
+  .main > .buttons {
+    top: 5%;
+    left: 23%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 37%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 10px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 35%;
+    height: 9%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 473px) and (max-width: 497px) {
+  .main > .buttons {
+    top: 5%;
+    left: 23%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 40%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 10px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 35%;
+    height: 9%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 465px) and (max-width: 472px) {
+  .main > .buttons {
+    top: 5%;
+    left: 21%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 40%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 10px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 35%;
+    height: 9%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 455px) and (max-width: 464px) {
+  .main > .buttons {
+    top: 5%;
+    left: 21%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 40%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 35%;
+    height: 9%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 443px) and (max-width: 454px) {
+  .main > .buttons {
+    top: 5%;
+    left: 20%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 42%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 427px) and (max-width: 442px) {
+  .main > .buttons {
+    top: 5%;
+    left: 19%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 43%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 416px) and (max-width: 426px) {
+  .main > .buttons {
+    top: 5%;
+    left: 18%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 44%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 400px) and (max-width: 415px) {
+  .main > .buttons {
+    top: 5%;
+    left: 17%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 46%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 392px) and (max-width: 399px) {
+  .main > .buttons {
+    top: 5%;
+    left: 15%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 47%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 10px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 384px) and (max-width: 391px) {
+  .main > .buttons {
+    top: 5%;
+    left: 14%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 10px;
+    width: 48%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 57px;
+    height: 57px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 5px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 378px) and (max-width: 383px) {
+  .main > .buttons {
+    top: 5%;
+    left: 13%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 48%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 5px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 368px) and (max-width: 377px) {
+  .main > .buttons {
+    top: 5%;
+    left: 12%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 48.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 5px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 358px) and (max-width: 367px) {
+  .main > .buttons {
+    top: 5%;
+    left: 9%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 49.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 5px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+@media (min-width: 350px) and (max-width: 357px) {
+  .main > .buttons {
+    top: 5%;
+    left: 9%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 51%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    min-width: 5px;
+  }
+  .plus- {
+    height: 25px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 5px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);  }
+}
+
+@media (min-width: 340px) and (max-width: 349px) {
+  .main > .buttons {
+    top: 5%;
+    left: 7%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 52.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 330px) and (max-width: 339px) {
+  .main > .buttons {
+    top: 5%;
+    left: 6%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 54%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 329px) {
+  .main > .buttons {
+    top: 5%;
+    left: 6%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 54%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 310px) and (max-width: 319px) {
+  .main > .buttons {
+    top: 5%;
+    left: 3%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 55%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 300px) and (max-width: 309px) {
+  .main > .buttons {
+    top: 5%;
+    left: 1%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 56.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 290px) and (max-width: 299px) {
+  .main > .buttons {
+    top: 5%;
+    left: -1%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 58.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
+
+@media (min-width: 280px) and (max-width: 289px) {
+  .main > .buttons {
+    top: 5%;
+    left: -2%;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slot-machine {
+    padding: 8px;
+    width: 60.5%;
+    height: 50%;
+    gap: clamp(2px, 2vw, 2px);
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(0px, 20px);
+  }
+  .reel {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+  }
+  #coins {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    font-size: 17px;
+    min-width: 1px;
+  }
+  .plus- {
+    height: 23px;
+    width: 20px;
+    padding-top: 0px;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #button {
+    width: 100px;
+    height: 1px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    padding-bottom: 27px;
+    font-size: 17px;
+  }
+  .btn {
+    height: 30px;
+    width: 30px;
+    font-size: 8px;
+  }
+  .balance {
+    align-items: center;
+    width: 25%;
+  }
+  #logo {
+    width: 40%;
+    height: 10%;
+    transform: translate(0px, 10px);
+  }
+}
